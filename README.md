@@ -14,7 +14,7 @@ how particles move through space-time.<br>
 ---
 ## **The Equations**
 ---
-<div style="background: white; padding:10px;">
+<div>
 
 ![psi_equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/8dab3fb86520cd6a548f215e376a3e9b4549feac)<br>
 
