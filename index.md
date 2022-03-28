@@ -1,37 +1,29 @@
-## Welcome to GitHub Pages
+# Visualizing the Quantum Harmonic Oscillator
+**Programmed By Cole Fleming**
+<br><br>
 
-You can use the [editor on GitHub](https://github.com/derpferpmerp/QHO/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+---
+## **Description**
+---
+This project is a simple implementation of the visualization process<br>
+of the Quantum Harmonic Oscillator. It's a theorem in Quantum Physics governed<br>
+by the Schrödinger equation, a non-relativistic (to my knowledge) equation that relates<br>
+how particles move through space-time.<br>
 
-### Markdown
+---
+## **The Equations**
+---
+<div>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+![psi_equation](https://wikimedia.org/api/rest_v1/media/math/render/svg/8dab3fb86520cd6a548f215e376a3e9b4549feac)<br>
 
-```markdown
-Syntax highlighted code block
+![hermite_poly](https://wikimedia.org/api/rest_v1/media/math/render/svg/9a199b131d9946bbe17ddf07c780a6a26d83831e)<br>
 
-# Header 1
-## Header 2
-### Header 3
+![energy_eigen](https://wikimedia.org/api/rest_v1/media/math/render/svg/86cc6f66ce0cf3c08afd4d1bf92433aa7d6d0bb5)<br>
 
-- Bulleted
-- List
+![conv_to_time](https://wikimedia.org/api/rest_v1/media/math/render/svg/462d3daef5f01c9a0c39c90a21c064b52155f32a)<br>
 
-1. Numbered
-2. List
+![prob_calc](https://wikimedia.org/api/rest_v1/media/math/render/svg/4ddaf4da12683bdc16d2bf67893f20f9eab035a2)<br>
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/derpferpmerp/QHO/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+</div>
