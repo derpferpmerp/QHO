@@ -14,8 +14,9 @@ from tqdm import tqdm
 
 plt.style.use("dark_background")
 
-fig, ax = plt.subplots(1, 1, figsize=(10,10))
+fig, (axProb, axLoc) = plt.subplots(1, 2, figsize=(20,10))
 camera = Camera(fig)
+
 SPEED_MOD = 1 # 2: Double the Video Speed
 INTERPOLATE = False
 GRAPH_PROB = True
@@ -110,23 +111,22 @@ if __name__ == '__main__':
     TIME = np.linspace(0, 25, 200)
     lst = qho.solve(TIME, X_L)
     for itm in tqdm(lst):
-        if GRAPH_PROB:
-            j = abs(itm)*abs(itm)
-            J = interpolate(j)
-            ax.plot(X_L, J, color="red")
-        else:
-            PARTS = [ [ITM.real, ITM.imag] for ITM in itm]
-            REAL, IMAG = zip(*PARTS)
-            COMP = []
-            for re, im in PARTS:
-                COMP.append(sqrt(re*re + im*im))
-            if INTERPOLATE:
-                REAL = interpolate(np.array(REAL))
-                IMAG = interpolate(np.array(IMAG))
-                COMP = interpolate(np.array(COMP))
-            ax.plot(X_L, COMP, color="red")
-            ax.plot(X_L, REAL, color="blue")
-            ax.plot(X_L, IMAG, color="orange")
+        j = abs(itm)*abs(itm)
+        J = interpolate(j)
+        axProb.plot(X_L, J, color="red")
+        
+        PARTS = [ [ITM.real, ITM.imag] for ITM in itm]
+        REAL, IMAG = zip(*PARTS)
+        COMP = []
+        for re, im in PARTS:
+            COMP.append(sqrt(re*re + im*im))
+        if INTERPOLATE:
+            REAL = interpolate(np.array(REAL))
+            IMAG = interpolate(np.array(IMAG))
+            COMP = interpolate(np.array(COMP))
+        axLoc.plot(X_L, COMP, color="red")
+        axLoc.plot(X_L, REAL, color="blue")
+        axLoc.plot(X_L, IMAG, color="orange")
         camera.snap()
     FPS = len(TIME)/max(TIME) * SPEED_MOD
     anim = camera.animate(blit=True,) #interval=MS_PER_FRAME)
